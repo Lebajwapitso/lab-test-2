@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
+import { API_BASE } from "./services/api";
 
 // ─── Components & Pages (must exist in your src/ tree) ─────────
 import Sidebar from "./components/Sidebar";
@@ -21,7 +22,7 @@ import Payments from "./pages/Payments";
 import Users from "./pages/Users";
 import Reports from "./pages/Reports";
 
-const API_URL = "http://localhost:5000/api/auth";
+const API_URL = `${API_BASE}/auth`;
 
 function App() {
     // LOGIN AND SIGNUP INPUTS
